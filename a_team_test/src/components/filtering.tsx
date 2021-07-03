@@ -89,27 +89,9 @@ function Filtering({
     }
   };
 
-  //   useEffect(() => {
-  //     window.addEventListener("click", handleClickOutside);
-
-  //     return () => {
-  //       window.removeEventListener("click", handleClickOutside);
-  //     };
-  //   });
-
   const { 밀링, 선반 } = stateA;
   const { 알루미늄, 탄소강, 구리, 합급강, 강철 } = stateB;
 
-  //   useEffect(() => {
-  //     let filterAnswer = [];
-  //     let prop: any;
-
-  //     // for (let prop in stateA) {
-  //     //   if (stateA[prop]) {
-  //     //     filterAnswer.push(prop);
-  //     //   }
-  //     // }
-  //   }, [stateA || stateB]);
   return (
     <div className="filtering">
       <div>

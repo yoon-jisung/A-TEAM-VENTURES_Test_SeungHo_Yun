@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
 interface CardProps {
   cards: any;
@@ -19,7 +19,7 @@ interface Cards {
 function Card({ cards }: CardProps) {
   return (
     <div className="card_form">
-      {cards === [] ? (
+      {cards.length === 0 ? (
         <div className="card_empty">조건에 맞는 견적 요청이 없습니다.</div>
       ) : (
         <>
