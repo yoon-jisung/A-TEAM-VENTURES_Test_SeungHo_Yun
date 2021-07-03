@@ -11,7 +11,9 @@ function App() {
   const [cards, setCards] = useState<object[]>([]);
   const [defalutCards, setDefaltCards] = useState<object[]>([]);
 
-  const hendleFiltering = async (answer: string) => {
+  const handleChatFiltering = () => {};
+
+  const handleFiltering = async (answer: string) => {
     setFiltering([...filtering, answer]);
   };
 
@@ -143,7 +145,7 @@ function App() {
         <Summery />
         <div className="filtering_togle">
           <Filtering
-            hendleFiltering={hendleFiltering}
+            handleFiltering={handleFiltering}
             fixFiltering={fixFiltering}
             clearFiltering={clearFiltering}
           />

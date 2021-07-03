@@ -131,7 +131,7 @@ span {
   margin: 0px 7px;
 }
 .filtering_reset:hover {
-  font-size: 21px;
+  opacity: 1;
 }
 .card_empty {
   border: 1px solid gray;
@@ -156,8 +156,73 @@ span {
   border-radius: 4px;
   padding: 24px 16px;
 }
+.card:hover {
+  border: 1px solid #1565c0;
+}
 .card_form {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
+}
+.due {
+  opacity: 0.5;
+  margin: 24px 0px 16px 0px;
+}
+hr {
+  opacity: 0.5;
+  margin-bottom: 32px;
+}
+.count {
+  font-weight: bold;
+  margin-left: 32px;
+}
+.answer_btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 12px;
+  background: #ffffff;
+  border-radius: 4px;
+  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+.answer_btn:hover {
+  color: #ffffff;
+  background: #2196f3;
+}
+.chat_btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 12px;
+  background: #ffffff;
+  border-radius: 4px;
+  color: #2196f3;
+  border: 1px solid #2196f3;
+  margin-left: 5px;
+}
+.chat_btn:hover {
+  color: #ffffff;
+  background: #2196f3;
+}
+.card_btn {
+  margin-top: 32px;
+  display: flex;
+}
+.card_title {
+  display: flex;
+  justify-content: space-between;
+}
+.chating {
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 12px;
+  padding: 2px 8px;
+  border: 1px solid #ffa000;
+  color: #ffa000;
+  user-select: auto;
+  display: flex;
+  align-items: center;
 }

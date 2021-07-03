@@ -6,7 +6,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
 interface filterProps {
-  hendleFiltering: (answer: string) => void;
+  handleFiltering: (answer: string) => void;
   fixFiltering: (answer: string) => void;
   clearFiltering: () => void;
 }
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 function Filtering({
-  hendleFiltering,
+  handleFiltering,
   fixFiltering,
   clearFiltering,
 }: filterProps) {
@@ -74,7 +74,7 @@ function Filtering({
   const handleChangeA = (event: React.ChangeEvent<HTMLInputElement>) => {
     setStateA({ ...stateA, [event.target.name]: event.target.checked });
     if (event.target.checked) {
-      hendleFiltering(String(event.target.name));
+      handleFiltering(String(event.target.name));
     } else {
       fixFiltering(String(event.target.name));
     }
@@ -83,7 +83,7 @@ function Filtering({
   const handleChangeB = (event: React.ChangeEvent<HTMLInputElement>) => {
     setStateB({ ...stateB, [event.target.name]: event.target.checked });
     if (event.target.checked) {
-      hendleFiltering(String(event.target.name));
+      handleFiltering(String(event.target.name));
     } else {
       fixFiltering(String(event.target.name));
     }
