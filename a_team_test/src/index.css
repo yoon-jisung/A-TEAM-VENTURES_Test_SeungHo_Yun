@@ -68,3 +68,33 @@ span {
   color: black;
   font-size: 24px;
 }
+
+/*          써머리           */
+.filtering {
+  display: flex;
+  margin-top: 54px;
+}
+
+.filtering > button {
+  cursor: pointer;
+  border: 1px solid #939fa5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 12px;
+  background-color: white;
+  height: 32px;
+  font-size: 19px;
+  margin-right: 10px;
+}
+.filtering > button * {
+  margin: 0px 10px;
+}
+.filtering > button:hover {
+  border: 1px solid #1565c0;
+}
+.fa-caret-down {
+  color: gray;
+}
