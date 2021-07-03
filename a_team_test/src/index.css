@@ -72,7 +72,6 @@ span {
 /*          써머리           */
 .filtering {
   display: flex;
-  margin-top: 54px;
 }
 
 .filtering > button {
@@ -97,4 +96,11 @@ span {
 }
 .fa-caret-down {
   color: gray;
+}
+.filtering_togle {
+  display: flex;
+  flex-direction: row;
+  margin-top: 54px;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/header";
 import Summery from "./components/summery";
 import Filtering from "./components/filtering";
+import Togle from "./components/togle";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Summery />
         <div className="filtering_togle">
           <Filtering />
+          <Togle />
         </div>
       </div>
     </div>
