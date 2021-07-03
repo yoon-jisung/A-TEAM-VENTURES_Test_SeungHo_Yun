@@ -9,9 +9,22 @@ import axios, { AxiosResponse } from "axios";
 function App() {
   const [filtering, setFiltering] = useState<string[]>([]);
   const [cards, setCards] = useState<object[]>([]);
+  const [prevCards, setPrevCards] = useState<object[]>([]);
   const [defalutCards, setDefaltCards] = useState<object[]>([]);
 
-  const handleChatFiltering = () => {};
+  const handleChatFiltering = (isTrue: boolean) => {
+    if (isTrue) {
+      let changeCards = cards.filter((el: any) => {
+        if (el.status === "상담중") {
+          return true;
+        }
+      });
+      setPrevCards(cards);
+      setCards(changeCards);
+    } else if (!isTrue) {
+      setCards(prevCards);
+    }
+  };
 
   const handleFiltering = async (answer: string) => {
     setFiltering([...filtering, answer]);
@@ -149,7 +162,7 @@ function App() {
             fixFiltering={fixFiltering}
             clearFiltering={clearFiltering}
           />
-          <Togle />
+          <Togle handleChatFiltering={handleChatFiltering} />
         </div>
         <Card cards={cards} />
       </div>
