@@ -147,7 +147,7 @@ span {
   border-radius: 4px;
 }
 .card {
-  width: 33.3%;
+  width: 31.3%;
   height: 356px;
   margin-top: 54px;
   background: #ffffff;
@@ -155,4 +155,9 @@ span {
   box-sizing: border-box;
   border-radius: 4px;
   padding: 24px 16px;
+}
+.card_form {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
 }

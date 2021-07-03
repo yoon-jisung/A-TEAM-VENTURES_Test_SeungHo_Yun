@@ -5,6 +5,12 @@ import FormControl from "@material-ui/core/FormControl";
 import FormGroup from "@material-ui/core/FormGroup";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
+interface filterProps {
+  hendleFiltering: (answer: string) => void;
+  fixFiltering: (answer: string) => void;
+  clearFiltering: () => void;
+}
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -16,7 +22,11 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-function Filtering() {
+function Filtering({
+  hendleFiltering,
+  fixFiltering,
+  clearFiltering,
+}: filterProps) {
   const classes = useStyles();
   const manuEl: any = useRef();
   const [isOpenA, setIsOpenA] = useState<boolean>(false);
@@ -52,6 +62,7 @@ function Filtering() {
       합급강: false,
       강철: false,
     });
+    clearFiltering();
   };
   const maunStateA = () => {
     setIsOpenA(!isOpenA);
@@ -62,10 +73,20 @@ function Filtering() {
 
   const handleChangeA = (event: React.ChangeEvent<HTMLInputElement>) => {
     setStateA({ ...stateA, [event.target.name]: event.target.checked });
+    if (event.target.checked) {
+      hendleFiltering(String(event.target.name));
+    } else {
+      fixFiltering(String(event.target.name));
+    }
   };
 
   const handleChangeB = (event: React.ChangeEvent<HTMLInputElement>) => {
     setStateB({ ...stateB, [event.target.name]: event.target.checked });
+    if (event.target.checked) {
+      hendleFiltering(String(event.target.name));
+    } else {
+      fixFiltering(String(event.target.name));
+    }
   };
 
   //   useEffect(() => {
@@ -79,6 +100,16 @@ function Filtering() {
   const { 밀링, 선반 } = stateA;
   const { 알루미늄, 탄소강, 구리, 합급강, 강철 } = stateB;
 
+  //   useEffect(() => {
+  //     let filterAnswer = [];
+  //     let prop: any;
+
+  //     // for (let prop in stateA) {
+  //     //   if (stateA[prop]) {
+  //     //     filterAnswer.push(prop);
+  //     //   }
+  //     // }
+  //   }, [stateA || stateB]);
   return (
     <div className="filtering">
       <div>
