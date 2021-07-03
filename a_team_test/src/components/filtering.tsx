@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControl from "@material-ui/core/FormControl";
@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function Filtering() {
   const classes = useStyles();
+  const manuEl: any = useRef();
   const [isOpenA, setIsOpenA] = useState<boolean>(false);
   const [isOpenB, setIsOpenB] = useState<boolean>(false);
   const [stateA, setStateA] = useState({
@@ -33,6 +34,25 @@ function Filtering() {
     강철: false,
   });
 
+  const handleClickOutside = (e: any) => {
+    if (isOpenA || (isOpenB && !manuEl.current.contains(e.target))) {
+      setIsOpenA(false);
+      setIsOpenB(false);
+    }
+  };
+  const handleClear = () => {
+    setStateA({
+      밀링: false,
+      선반: false,
+    });
+    setStateB({
+      알루미늄: false,
+      탄소강: false,
+      구리: false,
+      합급강: false,
+      강철: false,
+    });
+  };
   const maunStateA = () => {
     setIsOpenA(!isOpenA);
   };
@@ -48,6 +68,14 @@ function Filtering() {
     setStateB({ ...stateB, [event.target.name]: event.target.checked });
   };
 
+  //   useEffect(() => {
+  //     window.addEventListener("click", handleClickOutside);
+
+  //     return () => {
+  //       window.removeEventListener("click", handleClickOutside);
+  //     };
+  //   });
+
   const { 밀링, 선반 } = stateA;
   const { 알루미늄, 탄소강, 구리, 합급강, 강철 } = stateB;
 
@@ -58,7 +86,7 @@ function Filtering() {
           가공방식<i className="fas fa-caret-down"></i>
         </button>
         {isOpenA ? (
-          <div className="filtering_selecter">
+          <div className="filtering_selecter" ref={manuEl}>
             <FormControl component="fieldset" className={classes.formControl}>
               <FormGroup>
                 <FormControlLabel
@@ -93,7 +121,7 @@ function Filtering() {
           재료<i className="fas fa-caret-down"></i>
         </button>
         {isOpenB ? (
-          <div className="filtering_selecter">
+          <div className="filtering_selecter" ref={manuEl}>
             <FormControl component="fieldset" className={classes.formControl}>
               <FormGroup>
                 <FormControlLabel
@@ -155,6 +183,10 @@ function Filtering() {
             </FormControl>
           </div>
         ) : null}
+      </div>
+      <div className="filtering_reset" onClick={handleClear}>
+        <i className="fas fa-redo-alt"></i>
+        <div>필터링 리셋</div>
       </div>
     </div>
   );
