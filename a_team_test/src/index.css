@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fafafa;
+}
+
+.header {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 60px;
+  background-color: #1565c0;
+  box-shadow: none;
+  border-bottom: 1px solid rgb(222, 226, 230);
+  height: 70px;
+}
+
+.header_company {
+  display: flex;
+  align-items: center;
+}
+.header_company > h1,
+span {
+  margin: 0px 3px;
+}
+.header_company > span {
+  font-size: 34px;
+  margin-top: 2px;
+}
+
+.heafer_info > span {
+  margin: 0px 20px;
+}
+
+.heafer_info i {
+  margin: 0px 10px;
+}
+
+/*          해더           */
