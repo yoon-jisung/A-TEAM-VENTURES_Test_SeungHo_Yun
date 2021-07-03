@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Summery from "./components/summery";
 import Filtering from "./components/filtering";
 import Togle from "./components/togle";
+import Card from "./components/card";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Filtering />
           <Togle />
         </div>
+        <Card />
       </div>
     </div>
   );

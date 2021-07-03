@@ -74,7 +74,7 @@ span {
   display: flex;
 }
 
-.filtering > button {
+.filtering button {
   cursor: pointer;
   border: 1px solid #939fa5;
   box-sizing: border-box;
@@ -84,11 +84,11 @@ span {
   align-items: center;
   padding: 4px 12px;
   background-color: white;
-  height: 32px;
+  height: 40px;
   font-size: 19px;
   margin-right: 10px;
 }
-.filtering > button * {
+.filtering button * {
   margin: 0px 10px;
 }
 .filtering > button:hover {
@@ -103,4 +103,28 @@ span {
   margin-top: 54px;
   justify-content: space-between;
   align-items: center;
+}
+.filtering_selecter {
+  background: #ffffff;
+  position: absolute;
+  z-index: 1;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #939fa5;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.card_empty {
+  border: 1px solid gray;
+  width: 100%;
+  margin-top: 54px;
+  height: 120px;
+  display: flex;
+  user-select: auto;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  opacity: 0.5;
+  border-radius: 4px;
 }
