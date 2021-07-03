@@ -19,7 +19,7 @@ interface Cards {
 
 function Card({ cards }: CardProps) {
   return (
-    <div className="card_form">
+    <div className={cards.length < 3 ? "form card_form" : "card_form"}>
       {cards.length === 0 ? (
         <div className="card_empty">조건에 맞는 견적 요청이 없습니다.</div>
       ) : (

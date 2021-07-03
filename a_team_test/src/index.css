@@ -236,8 +236,10 @@ hr {
 .mobile_header_info {
   display: none;
 }
-
-@media screen and (max-width: 1200px) {
+.form {
+  justify-content: space-around;
+}
+@media screen and (max-width: 1000px) {
   .card_form {
     display: flex;
     flex-direction: column;
