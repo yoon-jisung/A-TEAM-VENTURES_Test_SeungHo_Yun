@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/css/main.b71a797e.chunk.css",
+    "main.js": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/js/main.b8a9d50e.chunk.js",
+    "main.js.map": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/js/main.b8a9d50e.chunk.js.map",
+    "runtime-main.js": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/js/runtime-main.69d57060.js",
+    "runtime-main.js.map": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/js/runtime-main.69d57060.js.map",
+    "static/js/2.660a7a64.chunk.js": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/js/2.660a7a64.chunk.js",
+    "static/js/2.660a7a64.chunk.js.map": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/js/2.660a7a64.chunk.js.map",
+    "index.html": "/A-TEAM-VENTURES_Test_SeungHo_Yun/index.html",
+    "static/css/main.b71a797e.chunk.css.map": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/css/main.b71a797e.chunk.css.map",
+    "static/js/2.660a7a64.chunk.js.LICENSE.txt": "/A-TEAM-VENTURES_Test_SeungHo_Yun/static/js/2.660a7a64.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69d57060.js",
+    "static/js/2.660a7a64.chunk.js",
+    "static/css/main.b71a797e.chunk.css",
+    "static/js/main.b8a9d50e.chunk.js"
+  ]
+}
